@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Danh Sách Xe Điện VinFast – Giá Mới Nhất</title>
+<meta name="description" content="Danh sách xe điện VinFast VF3, VF5, VF6, VF8, VF9. Giá bán, thông số và đặt xe online.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="logo">VINFAST ELECTRIC</h1>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="cart.html">Giỏ hàng</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container">
+  <h2>🚗 Danh sách xe điện VinFast</h2>
+
+  <div class="products-grid" id="product-list"></div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+  const list = document.getElementById("product-list");
+
+  let html = "";
+  products.forEach(p => {
+    html += `
+      <div class="product-card">
+        <img src="${p.image}" alt="${p.name}">
+        <h3>${p.name}</h3>
+        <p class="price">${p.price.toLocaleString()}₫</p>
+        <p class="desc">${p.description}</p>
+
+        <button onclick="addToCart(${p.id})">🛒 Thêm giỏ hàng</button>
+        <a href="product-detail.html?id=${p.id}" class="btn-outline">Xem chi tiết</a>
+      </div>
+    `;
+  });
+
+  list.innerHTML = html;
+</script>
+
+</body>
+</html>
