@@ -1,0 +1,54 @@
+{
+  "name": "Chess Pro",
+  "short_name": "ChessPro",
+  "description": "A full-featured online chess platform inspired by chess.com. Includes authentication, real-time multiplayer, full chess rules engine, puzzles, themes, multi-language support, and a mobile-first responsive UI.",
+  "version": "1.0.0",
+  "author": "MinhAnh",
+  "homepage": "/",
+  "keywords": [
+    "chess",
+    "online chess",
+    "multiplayer",
+    "realtime",
+    "react",
+    "pwa",
+    "board game",
+    "chess engine",
+    "mobile chess",
+    "chess.com clone"
+  ],
+  "application": {
+    "type": "web",
+    "category": "game.board.chess",
+    "orientation": "portrait-primary",
+    "mobileOptimized": true
+  },
+  "features": {
+    "authentication": true,
+    "registration": true,
+    "guestPlay": true,
+    "realtimeMultiplayer": true,
+    "aiOpponent": false,
+    "puzzles": true,
+    "themes": true,
+    "darkMode": true,
+    "lightMode": true,
+    "multiLanguage": true
+  },
+  "i18n": {
+    "defaultLanguage": "vi",
+    "supportedLanguages": ["vi", "en"]
+  },
+  "ui": {
+    "design": "chess.com-inspired",
+    "responsive": true,
+    "mobileFirst": true,
+    "touchOptimized": true
+  },
+  "deployment": {
+    "platforms": ["vercel", "firebase"],
+    "pwaReady": true,
+    "spa": true
+  },
+  "requestFramePermissions": []
+}
